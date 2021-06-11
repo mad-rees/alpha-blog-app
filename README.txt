@@ -1,2 +1,1 @@
-Hello World!\n
-  1. Version Control with Git
+1. First test repo for Ruby on Rails course
