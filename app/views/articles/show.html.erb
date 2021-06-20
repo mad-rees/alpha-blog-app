@@ -1,24 +1,23 @@
 <div class="container">
   <h2 class="text-center pt-4"><%= @article.title %></h2>
-</div>
-
-<div class="row justify-content-center">
-  <div class="col-10 mt-4">
-    <div class="card text-center shadow-sm mb-4 bg-body rounded">
-      <div class="card-header fst-italic">
+  <div class="row justify-content-center">
+    <div class="col-10 mt-4">
+      <div class="card text-center shadow-sm mb-4 bg-body rounded">
+        <div class="card-header fst-italic">
         by Chris Rees
-      </div>
-        <div class="card-body">
-          <div class="card-text text-start"><%= simple_format(@article.description) %>
-          </div>
-          <%= link_to "Edit", edit_article_path(@article), class: "btn btn-outline-secondary" %>
-          <%= link_to "Delete", article_path(@article), class: "btn btn-danger", method: :delete, data: {confirm: "Deleting this is forever... Still sure you wanna do it?"} %>
         </div>
-        <div class="card-footer text-muted">
-          <small>Created <%= time_ago_in_words(@article.created_at) %> ago, edited <%= time_ago_in_words(@article.updated_at) %></small>
+          <div class="card-body">
+            <div class="card-text text-start"><%= simple_format(@article.description) %>
+            </div>
+            <%= link_to "Edit", edit_article_path(@article), class: "btn btn-outline-secondary" %>
+            <%= link_to "Delete", article_path(@article), class: "btn btn-danger", method: :delete, data: {confirm: "Deleting this is forever... Still sure you wanna do it?"} %>
+            </div>
+            <div class="card-footer text-muted">
+              <small>Created <%= time_ago_in_words(@article.created_at) %> ago, edited <%= time_ago_in_words(@article.updated_at) %></small>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</div>
+
   
