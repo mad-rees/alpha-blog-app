@@ -17,7 +17,7 @@
               <%= link_to "Delete", article_path(article), class: "btn btn-danger", method: :delete, data: {confirm: "Deleting this is forever... Still sure you wanna do it?"} %>
             </div>
             <div class="card-footer text-muted">
-                <small>Created <%= time_ago_in_words(article.created_at) %> ago, edited <%= time_ago_in_words(article.updated_at) %> ago</small>
+                <small>Created <%= time_ago_in_words(article.created_at) %> ago, edited <%= time_ago_in_words(article.updated_at) %></small>
             </div>
           </div>
         </div>
