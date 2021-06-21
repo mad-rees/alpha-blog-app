@@ -1,0 +1,23 @@
+
+
+
+<%= form_with(scope: :session, url: login_path, local: true) do |f| %>
+
+  <div class="mb-3">
+    <%= f.label :email, class: "form-label" %>
+    <%= f.email_field :email, class: "form-control", placeholder: "Enter your email" %>
+  </div>
+  
+  <div class="mb-3">
+    <%= f.label :password, class: "form-label" %>
+    <%= f.password_field :password, class: "form-control", placeholder: "Enter your password" %>
+  </div>
+  
+  <div class="mb-3">
+    <%= f.submit "Log in", class: "btn btn-primary" %></br>
+  </div>
+  
+  <div class="mb-3">
+    <%= link_to 'Cancel', articles_path, class: "btn btn-outline-secondary" %>
+  </div>
+<% end %>
