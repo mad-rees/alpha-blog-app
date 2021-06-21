@@ -4,7 +4,8 @@ class ArticlesController < ApplicationController
   
   #Index actions
   def index
-    @articles = Article.all
+    @pagy, @articles = pagy(Article.all)
+
   end
   #Show action
   def show

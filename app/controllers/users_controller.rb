@@ -6,7 +6,7 @@ class UsersController < ApplicationController
   end
   
   def index 
-    @users = User.all
+    @pagy, @users = pagy(User.all)
   end
   
   def new 
