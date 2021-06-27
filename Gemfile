@@ -22,6 +22,8 @@ gem 'jbuilder', '~> 2.7'
 gem 'bcrypt', '~> 3.1.7'
 # Use Pagy for pagination.
 gem 'pagy', '~> 4.8'
+# Use rexml for testing.
+gem 'rexml', require: false
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
@@ -53,6 +55,7 @@ group :test do
   gem 'selenium-webdriver'
   # Easy installation and use of web drivers to run system tests with browsers
   gem 'webdrivers'
+  gem 'minitest', '~> 5.14.4'
 end
 
 group :production do
