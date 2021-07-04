@@ -11,6 +11,21 @@
     <%= f.label :description, class: "form-label" %>
     <%= f.text_area :description, rows: 5, class: "form-control", placeholder: "Your description here..." %>
   </div>
+  
+  <div class="mb-3">
+    <div class="form-check">
+      <%= f.label :category, class: "form-label" %>
+      <%= f.collection_check_boxes :category_ids, Category.order(:name), :id, :name do |b| %>
+        <span>
+          </br>
+          <%= b.check_box %>
+          <%= b.label %>
+
+        </span>
+      <% end %>
+    </div>
+  </div>
+  
   <div class="mb-3">
     <%= f.submit class: "btn btn-primary" %></br>
   </div>
