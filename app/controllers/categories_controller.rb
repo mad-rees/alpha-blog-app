@@ -13,8 +13,21 @@ class CategoriesController < ApplicationController
     else  
       render 'new'
     end
-    
   end  
+    
+  def edit  
+    @category = Category.find(params[:id])
+  end  
+    
+  def update  
+    @category = Category.find(params[:id])
+    if @category.update(category_params)
+      flash[:notice] = "Category successfully updated"
+      redirect_to @category  
+    else  
+        render 'edit'
+    end  
+  end
   
   def show 
     @category = Category.find(params[:id])
@@ -23,8 +36,7 @@ class CategoriesController < ApplicationController
   
   def index 
     @categories = Category.all
-    @pagy, @categories = pagy(Category.all)
-    
+    @pagy, @categories = pagy(Category.all)  
   end 
   private
   
@@ -37,5 +49,6 @@ class CategoriesController < ApplicationController
       flash[:alert] = "Only Admins can perform this action"
       redirect_to categories_path
     end
-  end
-end 
+  end  
+end  
+
